@@ -8,6 +8,7 @@ import (
 func main() {
 	// base.TestArray()
 	// base.TestSlice()
-	base.TestMap()
+	// base.TestMap()
+	base.TestFunction()
 	fmt.Println("let's go!")
 }
