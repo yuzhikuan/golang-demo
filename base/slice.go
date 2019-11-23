@@ -2,10 +2,6 @@ package base
 
 import "fmt"
 
-func init() {
-	fmt.Println("slice module init function")
-}
-
 // TestSlice 测试函数
 func TestSlice() {
 	a := [10]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 0}

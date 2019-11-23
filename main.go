@@ -9,6 +9,7 @@ func main() {
 	// base.TestArray()
 	// base.TestSlice()
 	// base.TestMap()
-	base.TestFunction()
+	// base.TestFunction()
+	base.TestStruct()
 	fmt.Println("let's go!")
 }

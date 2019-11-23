@@ -5,10 +5,6 @@ import (
 	"sort"
 )
 
-func init() {
-	fmt.Println("map module init function")
-}
-
 // TestMap 测试函数
 func TestMap() {
 	var m map[int]string
