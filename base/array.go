@@ -13,29 +13,33 @@ import (
 	"fmt"
 )
 
-var a1 = [5]int{1, 2, 3, 4, 5}
-var a2 = new([5]int)
-var a3 = [...]int{0: 1, 2: 3}
+// 创建数组
+var a1 = [5]int{1, 2, 3, 4, 5} // 字面量法创建一个数组
+var a2 = new([5]int)           // 创建一个指向[5]int类型数组的指针
+var a3 = [...]int{0: 1, 2: 3}  // 自动推断出数组的长度
 
 // TestArray 是一个测试数组的函数
 func TestArray() {
 	fmt.Println(a1)
 	fmt.Printf("%v\n", a2)
 
+	// 遍历数组
 	for index, value := range a3 {
 		fmt.Printf("下标 = %d, 值 = %d\n", index, value)
 	}
 
+	// 将数组赋值给另一个变量，发生的是"值拷贝"，两个变量的指针是不一样的
 	a4 := a1
 	fmt.Printf("数组 a1 - 值：%v，指针：%p\n", a1, &a1)
 	fmt.Printf("数组 a4 - 值：%v，指针：%p\n", a4, &a4)
 
+	// 函数传参也是"值拷贝"
 	transmitA(a1)
 
 	m, n := 1, 2
-	pointerArray := [2]*int{&m, &n}
+	pointerArray := [2]*int{&m, &n} // 指针数组
 	fmt.Printf("指针数组%v\n", pointerArray)
-	fmt.Printf("数组指针%v\n", &a1)
+	fmt.Printf("数组指针%v\n", &a1) // 数组的指针
 }
 
 func transmitA(a [5]int) {
@@ -48,5 +52,5 @@ func transmitA(a [5]int) {
  * 在同一个文件中的多个init方法，按照在代码中编写的顺序依次执行不同的init方法
  */
 func init() {
-	fmt.Println("base module init function")
+	fmt.Println("array module init function")
 }
