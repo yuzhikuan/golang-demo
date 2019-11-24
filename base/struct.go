@@ -38,6 +38,7 @@ type Animal struct {
 type Cat struct {
 	Animal
 	Climb bool
+	Name  string
 }
 
 // TestStruct 测试函数
@@ -72,10 +73,10 @@ func TestStruct() {
 	fmt.Println(h)
 
 	// 嵌套struct作为匿名字段的struct初始化
-	c := Cat{Animal: Animal{Name: "xiaohua", Age: 2}, Climb: true}
-	c.Animal.Name = "miaomiao"
-	c.Age = 3 // 被嵌套的struct的字段，已经绑定到了外层的struct
-	fmt.Println(c)
+	c := Cat{Animal: Animal{Name: "xiaohua", Age: 2}, Climb: true, Name: "miaomiao"}
+	c.Animal.Name = "xiaomiao"
+	c.Age = 3                             // 被嵌套的struct的字段，已经绑定到了外层的struct
+	fmt.Println(c, c.Name, c.Animal.Name) // c.Name, c.Animal.Name同名字段的取法
 }
 
 // struct类型作为函数参数，此时参数是 值 的拷贝

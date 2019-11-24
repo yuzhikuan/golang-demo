@@ -10,6 +10,8 @@ func main() {
 	// base.TestSlice()
 	// base.TestMap()
 	// base.TestFunction()
-	base.TestStruct()
+	// base.TestStruct()
+	// base.TestMethod()
+	base.TestInterface()
 	fmt.Println("let's go!")
 }
