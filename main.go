@@ -12,6 +12,7 @@ func main() {
 	// base.TestFunction()
 	// base.TestStruct()
 	// base.TestMethod()
-	base.TestInterface()
+	// base.TestInterface()
+	base.TestReflect()
 	fmt.Println("let's go!")
 }
