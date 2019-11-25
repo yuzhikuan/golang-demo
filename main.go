@@ -13,6 +13,7 @@ func main() {
 	// base.TestStruct()
 	// base.TestMethod()
 	// base.TestInterface()
-	base.TestReflect()
+	// base.TestReflect()
+	base.TestConcurrency()
 	fmt.Println("let's go!")
 }
