@@ -1,6 +1,13 @@
 /*
- * goroutine
- * Channel
+ * goroutine/channel/select
+ * Channel 类型属于引用类型，它的零值即为nil
+ * 1、对channel的重复关闭会引发运行时恐慌
+ * 2、向一个已被关闭的channel发送数据会引发运行时恐慌
+ * 3、发送操作会在channel已满时被阻塞
+ * 4、接收操作会在channel已空时被阻塞
+ *
+ * 接收通道: type Receiver <-chan int
+ * 发送通道: type Sender chan<- int
  */
 
 package base
